@@ -1,5 +1,11 @@
 # free-model-aggregator-02 — entry
 
+[![make.fun · free-model-aggregator-02](https://make.fun/badge/free-model-aggregator-02.svg)](https://make.fun/bounty/free-model-aggregator-02?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+[![rank](https://make.fun/badge/free-model-aggregator-02/newmrd0003-create/free-model-aggregator-02/rank.svg)](https://make.fun/bounty/free-model-aggregator-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+[![reward](https://make.fun/badge/free-model-aggregator-02/newmrd0003-create/free-model-aggregator-02/reward.svg)](https://make.fun/bounty/free-model-aggregator-02?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+
+Built for the [make.fun bounty "The best live free-model aggregator"](https://make.fun/bounty/free-model-aggregator-02) ($500 in USDC).
+
 One Node 22 server (stdlib only) that serves the house gateway's six prompts with
 live free models from OpenRouter, through the house gateway. OpenAI Chat
 Completions + Anthropic Messages wires, JSON + SSE, plus `GET /v1/models`.
