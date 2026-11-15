@@ -52,8 +52,11 @@ const PROTOCOL_VERSION = 1;
 const POLL_INTERVAL_MS = 100;
 /** The most bytes of one client request body this baseline reads. */
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
-/** How long one upstream dial may take; the client waits 30 s per prompt, so 4 attempts fit. */
-const UPSTREAM_TIMEOUT_MS = 7000;
+/** How long one upstream dial may take. The client waits 30 s per prompt and up to 4
+ * attempts run per prompt, so 5 s each (20 s worst case) leaves 10 s of headroom for
+ * translation, the token check, and the env's own checks; a 7 s dial was already a
+ * straggler for a one-word answer and risked the 4th attempt being cut off mid-flight. */
+const UPSTREAM_TIMEOUT_MS = 5000;
 /** Most dials tried for one prompt (first choice + failovers + one same-model retry). */
 const MAX_ATTEMPTS = 4;
 /** The env reads recovered refusals from this response header (at most 8 rows). */
